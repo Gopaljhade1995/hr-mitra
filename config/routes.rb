@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ resources :employees
  get 'about' => 'pages#about_us'
  get 'contact' => 'pages#contact_us'
  get 'privacy-policy' => 'pages#privacy_policy'
