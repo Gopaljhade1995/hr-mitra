@@ -1,2 +1,27 @@
-<h1>Employees#show</h1>
-<p>Find me in app/views/employees/show.html.erb</p>
+<div class="col-lg-12">
+	<div class="card rounded-0 mt-5 mb-5">
+		<div class="card-body">
+			<h2 class="text-center">Employee Details</h2>
+			<div class="row">
+				<div class="col-lg-6">
+					<h3 class="text-center">Personal information</h3>
+						<p class="lead"><strong>First Name:</strong> <%= @employee.first_name %></p>
+						<p class="lead"><strong>Middle Name:</strong> <%= @employee.middle_name %></p>
+						<p class="lead"><strong>Last Name:</strong> <%= @employee.last_name %></p>
+						<p class="lead"><strong>Personal Email:</strong> <%= @employee.personal_email %></p>
+				</div>
+				<div class="col-lg-6">
+					<h3 class="text-center">Address information</h3>
+						<p class="lead"><strong>Address Line 1:</strong> <%= @employee.address_line_1 %></p>
+						<p class="lead"><strong>Address Line 2:</strong> <%= @employee.address_line_2 %></p>
+						<p class="lead"><strong>City:</strong> <%= @employee.city %></p>
+						<p class="lead"><strong>State:</strong> <%= @employee.state %></p>
+						<p class="lead"><strong>Country:</strong> <%= @employee.country %></p>
+						<p class="lead"><strong>Pincode:</strong> <%= @employee.pincode %></p>
+				</div>
+			</div>
+			<%= link_to 'Back to Employees', employees_path, class: 'btn btn-outline-primary btn-lg rounded-0' %>
+			<%= link_to 'Edit Employee', edit_employee_path(@employee), class:'btn btn-primary btn-lg rounded-0' %>
+		</div>
+	</div>
+</div>

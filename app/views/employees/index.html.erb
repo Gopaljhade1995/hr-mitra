@@ -12,6 +12,7 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Address</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<body>
@@ -20,6 +21,11 @@
 				<td><%= employee.name %></td>
 				<td><%= employee.personal_email %></td>
 				<td><%= employee.full_address %></td>
+				<td>
+					<%= link_to "View", employee_path(employee), class: "btn btn-info" %>
+					<%= link_to "Edit", edit_employee_path(employee), class: "btn btn-primary" %>
+					<%= link_to "delete", employee_path(employee), class: "btn btn-danger", mehod: :delete, data: { confirm: 'Are you sure to delete this employee?'} %>
+				</td>
 			</tr>
 			<% end %>
 		</body>
