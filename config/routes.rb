@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
+   }
+
  resources :employees
  resources :documents
  get 'about' => 'pages#about_us'
