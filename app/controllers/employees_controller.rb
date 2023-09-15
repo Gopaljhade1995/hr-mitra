@@ -34,11 +34,12 @@ class EmployeesController < ApplicationController
 
   def destroy
     if @employee.destroy
-      redirect_to employees_path, notice: "employee has been deleted successfully"
+      redirect_to employees_path, notice: "Employee has been deleted successfully"
     end
   end
 
   private
+  
   def employee_params
     params.require(:employee).permit(:first_name, :middle_name, :last_name, :personal_email, :city, :state, :country, :pincode, :address_line_1, :address_line_2)
   end
